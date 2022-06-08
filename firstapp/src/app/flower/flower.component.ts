@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { Flower } from '../models/flower';
 
 @Component({
@@ -10,7 +11,7 @@ export class FlowerComponent implements OnInit {
 
   @Input() flower:Flower;
   @Output() countFlowerLike = new EventEmitter();
-  constructor() {
+  constructor(private route:Router) {
     this.flower = new Flower();
    }
 toggle(){
@@ -22,5 +23,7 @@ toggle(){
 }
   ngOnInit(): void {
   }
-
+  showBig(){
+    this.route.navigate(["pic",this.flower.id])
+  }
 }

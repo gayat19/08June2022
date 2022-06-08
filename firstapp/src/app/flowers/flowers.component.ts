@@ -11,10 +11,12 @@ export class FlowersComponent implements OnInit {
 //flower:Flower;
 flowers:Flower[];
 countLikes:number;
+username:any;
   constructor(private flowerService:FlowerService) { 
     //this.flower = new Flower(101,"Lilly",12.5,10,"assets/images/Pic1.jpg")
     this.flowers = this.flowerService.getFlowers();
     this.countLikes=0;
+    this.username = localStorage.getItem("un")?localStorage.getItem("un"):"";
   }
 
   ngOnInit(): void {

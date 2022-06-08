@@ -10,6 +10,8 @@ import { FlowerService } from './services/flower.service';
 import { AddFlowerComponent } from './add-flower/add-flower.component';
 import { FlowerComponent } from './flower/flower.component';
 import { CartComponent } from './cart/cart.component';
+import { ShowPicComponent } from './show-pic/show-pic.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { CartComponent } from './cart/cart.component';
     FlowersComponent,
     AddFlowerComponent,
     FlowerComponent,
-    CartComponent
+    CartComponent,
+    ShowPicComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

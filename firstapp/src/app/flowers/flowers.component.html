@@ -1,6 +1,13 @@
-<h1>
-    {{countLikes}}
+<h1 *ngIf="username; else login">
+    Welcome {{username}}!!
+    
 </h1>
+<ng-template #login>
+    <button class="btn btn-primary" routerLink="">Login</button>
+</ng-template>
+<h2>
+    {{countLikes}}
+</h2>
 <p *ngFor="let f of flowers">
     <app-flower [flower]="f" (countFlowerLike)="countNow()"></app-flower>
     <button (click)="buy(f.id)">Buy</button>
