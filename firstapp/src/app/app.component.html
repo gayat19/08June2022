@@ -1,0 +1,33 @@
+<h1>Check the change</h1>
+<p>
+    Welciome to Angular!!!
+</p>
+<hr>
+<div [ngSwitch]="choice">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">WebSiteName</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li><a (click)="choice='first'">First</a></li>
+            <li><a (click)="choice='flowers'">Flowers</a></li>
+            <li><a (click)="choice='add'">Add</a></li>
+            <li><a (click)="choice='cart'">Cart</a></li>
+          </ul>
+        </div>
+      </nav>
+      <hr>
+    <p *ngSwitchCase="'first'">
+        <app-first></app-first>
+    </p>
+    <p *ngSwitchCase="'flowers'">
+        <app-flowers></app-flowers>
+    </p>
+    <p *ngSwitchCase="'add'">
+     <app-add-flower></app-add-flower>
+  </p>
+  <p *ngSwitchCase="'cart'">
+    <app-cart></app-cart>
+ </p>
+</div>

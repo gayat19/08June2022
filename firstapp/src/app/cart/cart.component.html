@@ -1,0 +1,8 @@
+<div *ngIf="cart.length!=0; else empty">
+    <p *ngFor="let c of cart">
+        <app-flower [flower]="c"></app-flower>
+    </p>
+</div>
+<ng-template #empty>
+    Your cart is empty!!
+</ng-template>

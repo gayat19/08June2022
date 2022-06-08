@@ -1,0 +1,13 @@
+<p class="alert alert-success">
+    <label class="form-control">Flower Id</label>
+    <input type="number" class="form-control" [(ngModel)]="flower.id">
+    <label class="form-control">Flower name</label>
+    <input type="text" class="form-control" [(ngModel)]="flower.name">
+    <label class="form-control">Flower quantity</label>
+    <input type="number" class="form-control" [(ngModel)]="flower.quantity">
+    <label class="form-control">Flower price</label>
+    <input type="number" class="form-control" [(ngModel)]="flower.price">
+    <label class="form-control">Flower pic</label>
+    <input type="text" class="form-control" [(ngModel)]="flower.pic">
+    <button class="btn btn-success" (click)="addFlower()">Add</button>
+</p>

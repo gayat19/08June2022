@@ -1,0 +1,17 @@
+<p>first works!</p>
+<h1>
+    Check this component
+</h1>
+<span [class]="clsName" (click)="toggleLike()"></span>
+<!-- Interpollation -->
+<p *ngIf="name">
+   Name :  {{name}}
+</p>
+<br>
+<!-- propertyBinding -->
+<input type="text" [value]="name" #un>
+<!-- EventBinding -->
+<button class="btn btn-primary" (click)="showName(un.value)">Click Me</button>
+<!-- TwoWayBinding -->
+<input type="text" [(ngModel)]="name">
+
