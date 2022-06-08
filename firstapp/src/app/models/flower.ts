@@ -4,7 +4,8 @@ export class Flower{
         public name?:string,
         public price?:number,
         public quantity?:number,
-        public pic?:string) {
+        public pic?:string,
+        public like?:boolean) {
 
 
     }

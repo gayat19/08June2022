@@ -3,7 +3,7 @@
     Welciome to Angular!!!
 </p>
 <hr>
-<div [ngSwitch]="choice">
+<!-- <div [ngSwitch]="choice">
     <nav class="navbar navbar-default">
         <div class="container-fluid">
           <div class="navbar-header">
@@ -30,4 +30,23 @@
   <p *ngSwitchCase="'cart'">
     <app-cart></app-cart>
  </p>
+</div> -->
+<div [ngSwitch]="choice">
+  <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">WebSiteName</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li><a routerLink="first">First</a></li>
+          <li><a routerLink="flowers">Flowers</a></li>
+          <li><a routerLink="add">Add</a></li>
+          <li><a routerLink="cart">Cart</a></li>
+        </ul>
+      </div>
+    </nav>
+    <hr>
+</div>
+<div>
+  <router-outlet></router-outlet>
 </div>

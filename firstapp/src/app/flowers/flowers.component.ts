@@ -10,9 +10,11 @@ import { FlowerService } from '../services/flower.service';
 export class FlowersComponent implements OnInit {
 //flower:Flower;
 flowers:Flower[];
+countLikes:number;
   constructor(private flowerService:FlowerService) { 
     //this.flower = new Flower(101,"Lilly",12.5,10,"assets/images/Pic1.jpg")
     this.flowers = this.flowerService.getFlowers();
+    this.countLikes=0;
   }
 
   ngOnInit(): void {
@@ -23,6 +25,14 @@ flowers:Flower[];
       myFlower.quantity = 1;
       this.flowerService.addToCart(myFlower);
     }
+   
+  }
+  countNow(){
+    this.countLikes=0;
+    this.flowers.forEach(element => {
+      if(element.like)
+        this.countLikes++;
+    });
   }
 
 }

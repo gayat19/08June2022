@@ -7,8 +7,8 @@ export class FlowerService{
 
     constructor() {
         this.flowers = [
-            new Flower(101,"Lilly",12.5,10,"assets/images/Pic1.jpg"),
-            new Flower(102,"Rose",25.75,30,"assets/images/Pic2.jpg")
+            new Flower(101,"Lilly",12.5,10,"assets/images/Pic1.jpg",false),
+            new Flower(102,"Rose",25.75,30,"assets/images/Pic2.jpg",false)
         ]
         this.cart = [];
     }

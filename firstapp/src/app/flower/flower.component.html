@@ -1,9 +1,14 @@
 <p >
     Flower Name:{{flower.name}}
+    <span class="alert alert-success" 
+    *ngIf="flower.like"
+    (click)="toggle()">Liked</span>
+    <span class="alert alert-danger" (click)="toggle()" [hidden]="flower.like">No one liked yet</span>
     <br>
     Flower Price/pc:{{flower.price}}
     <br>
     Quantity Available:{{flower.quantity}}
     <br>
     <img [src]="flower.pic" height="200" width="200">
+    
 </p>

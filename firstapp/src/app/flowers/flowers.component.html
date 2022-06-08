@@ -1,5 +1,7 @@
-
+<h1>
+    {{countLikes}}
+</h1>
 <p *ngFor="let f of flowers">
-    <app-flower [flower]="f"></app-flower>
+    <app-flower [flower]="f" (countFlowerLike)="countNow()"></app-flower>
     <button (click)="buy(f.id)">Buy</button>
 </p>
