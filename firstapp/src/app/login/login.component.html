@@ -1,7 +1,47 @@
-<div>
+<!-- <div>
     <label class="form-control">Username</label>
-    <input type="text" class="form-control" [(ngModel)]="username">
+    <input type="text" class="form-control" required pattern="[A-Za-z][A-Za-z]*" [(ngModel)]="username" #un=ngModel>
+    <span class="alert alert-danger" *ngIf="un.errors && un.touched">
+       <span *ngIf="un.errors['required']" >
+            Username cannot be empty
+       </span>
+       <span *ngIf="un.errors['pattern']" >
+            Invalid entry for username
+       </span>
+    </span>
     <label class="form-control">Password</label>
-    <input type="password" class="form-control" [(ngModel)]="password">
-    <button class="btn btn-success" (click)="login()">Add</button>
+    <input type="password" class="form-control" required [(ngModel)]="password" #pass="ngModel">
+    <span class="alert alert-danger" *ngIf="pass.errors && pass.touched">
+        Password cannot be empty
+    </span>
+    <br>
+    <button class="btn btn-success" (click)="login(un,pass)">Login</button>
 </div>
+ -->
+
+ <form [formGroup]="myFrom" (ngSubmit)="login()">
+    <div>
+        <label class="form-control">Username</label>
+        <input type="text" class="form-control" formControlName="un">
+        <span class="alert alert-danger" *ngIf="un.errors && un.touched">
+           <span *ngIf="un.errors['required']" >
+                Username cannot be empty
+           </span>
+           <span *ngIf="un.errors['pattern']" >
+                Invalid entry for username
+           </span>
+           <span *ngIf="un.errors['err']" >
+            {{un.errors['err']}}
+       </span>
+        </span>
+        <label class="form-control">Password</label>
+        <input type="password" class="form-control" formControlName="pass">
+        <span class="alert alert-danger" *ngIf="pass.errors && pass.touched">
+            Password cannot be empty
+        </span>
+        <br>
+        <button class="btn btn-success">Login</button>
+    </div>
+    
+ </form>
+

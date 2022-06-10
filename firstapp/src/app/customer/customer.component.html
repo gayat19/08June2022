@@ -1,0 +1,8 @@
+<button class="btn btn-primary" (click)="show()">Fetch Custoemr data</button>
+<div *ngFor="let c of customers">
+    Custoemr ID:{{c.id}}
+    <br>
+    Customer Name: {{c.name}}
+    <br>
+    Custoemr Age: {{c.age}}
+</div>

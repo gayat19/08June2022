@@ -9,10 +9,12 @@ export class FirstComponent implements OnInit {
 name:string ;
 clsName:string;
 like:boolean;
+testdata:string;
   constructor() { 
     this.name="Jim";
     this.clsName="glyphicon glyphicon-heart-empty";
     this.like = false;
+    this. testdata = "Lets see how pipe will transform this data in to short";
 
   }
 

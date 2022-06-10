@@ -1,11 +1,11 @@
 <p >
-    Flower Name:{{flower.name}}
+    Flower Name:{{flower.name | uppercase | lowercase}}
     <span class="alert alert-success" 
     *ngIf="flower.like"
     (click)="toggle()">Liked</span>
     <span class="alert alert-danger" (click)="toggle()" [hidden]="flower.like">No one liked yet</span>
-    <br>
-    Flower Price/pc:{{flower.price}}
+    <br> <br> <br>
+    Flower Price/pc:{{flower.price | currency:'INR'}}
     <br>
     Quantity Available:{{flower.quantity}}
     <br>

@@ -1,4 +1,7 @@
 <p>first works!</p>
+<p>
+    <span matBadge="4" matBadgeOverlap="true">Text with a badge</span>
+  </p>
 <h1>
     Check this component
 </h1>
@@ -14,4 +17,10 @@
 <button class="btn btn-primary" (click)="showName(un.value)">Click Me</button>
 <!-- TwoWayBinding -->
 <input type="text" [(ngModel)]="name">
+<hr>
+Data: {{testdata | textpipe:15}}
+<hr>
+<input type="text" appCardnumber>
+<hr><br><br>
+
 
